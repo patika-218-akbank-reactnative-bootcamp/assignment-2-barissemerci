@@ -11,18 +11,49 @@
 import {ScrollView, StyleSheet, View} from 'react-native';
 import Header from './components/Header';
 import Menu from './components/Menu';
+import IconMessage from 'react-native-vector-icons/MaterialCommunityIcons'
+import Messages from './components/Messages';
+
  
  const App = () => {
    return (
-    <ScrollView>
-        <Header />
-        <Menu />
-    </ScrollView>
+    <View style={styles.container}>
+       <Header></Header>
+       <Menu></Menu>
+        <View style={styles.button}>
+          <IconMessage style={styles.icon} size={35} name="android-messages"/>
+        </View>
+        <Messages />
+    </View>
    );
  };
  
  const styles = StyleSheet.create({
+ container:{
+   flex:1
+
+},
+
+
+  icon:{
+    color: 'white',
+
+   },
+   button:{
+    transform: [{ rotateY: '180deg'}],
    
+    width:70,
+    height:70,
+    borderRadius:35,
+    backgroundColor:'#008069',
+    alignItems:'center',
+    justifyContent:'center',
+    position:'absolute',
+    bottom:20,
+    right:20
+   
+   
+   }
  });
  
  export default App;
