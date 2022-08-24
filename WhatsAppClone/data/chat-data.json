@@ -1,0 +1,86 @@
+[
+    {
+        "id":"123swd",
+        "receiver":{
+            "id":"5456smk",
+            "firstName":"Ahmet",
+            "lastName":"Yılmaz"
+        },
+        "messages":[
+           {"text":"Selam","datetime":"2022-08-20T19:00:00.000Z"},
+           {"text":"Naber?","datetime":"2022-08-20T19:01:00.000Z"},
+           {"text":"Benden de iyilik","datetime":"2022-08-20T19:02:00.000Z"},
+           {"text":"Bak ne dicem","datetime":"2022-08-20T19:02:00.000Z"},
+           {"text":"Akşama sinemaya gidelim mi?","datetime":"2022-08-20T19:03:00.000Z"},
+           {"text":"Çıkınca da kahve içmeye gideriz","datetime":"2022-08-20T19:03:00.000Z"},
+           {"text":"Tamamdır","datetime":"2022-08-20T19:05:00.000Z"},
+           {"text":"Anlaştık o zaman, işten çıkınca alo derim","datetime":"2022-08-20T19:06:00.000Z"}
+        ]
+    },
+
+
+    {
+        "id":"5456smk",
+        "receiver":{
+            "id":"123swd",
+            "firstName":"Barış",
+            "lastName":"Yakamoz"
+        },
+        "messages":[
+           {"text":"Merhaba","datetime":"2022-08-20T19:00:30.000Z"},
+           {"text":"İyidir senden naber?","datetime":"2022-08-20T19:01:30.000Z"},
+           {"text":"Olurrrrr","datetime":"2022-08-20T19:04:00.000Z"},
+           {"text":"Tamamdır, görüşürüz","datetime":"2022-08-20T19:06:30.000Z"}
+        ]
+    },
+
+
+
+    {
+        "id":"klm693",
+        "receiver":{
+            "id":"5456smk",
+            "firstName":"Ahmet",
+            "lastName":"Yılmaz"
+        },
+        "messages":[
+           {"text":"Hey","datetime":"2022-08-20T19:00:00.000Z"},
+           {"text":"Napıyosun?","datetime":"2022-08-20T19:01:00.000Z"},
+           {"text":"Ben de aynı","datetime":"2022-08-20T19:02:00.000Z"},
+           {"image":"https://picsum.photos/200/300","datetime":"2022-08-20T19:02:00.000Z"},
+           {"text":"Şu fotoğrafı gördün mü?","datetime":"2022-08-20T19:03:00.000Z"},
+           {"text":"Yeni paylaşmış","datetime":"2022-08-20T19:03:00.000Z"},
+           {"text":"Harika değil mi???","datetime":"2022-08-20T19:03:00.000Z"},
+           {"text":"Bence deeeee","datetime":"2022-08-20T19:05:00.000Z"},
+        ]
+    },
+    {
+        "id":"5456smk",
+        "receiver":{
+            "id":"klm693",
+            "firstName":"Mert",
+            "lastName":"Karayel"
+        },
+        "messages":[
+           {"text":"Hey","datetime":"2022-08-20T19:00:30.000Z"},
+           {"text":"Oturuyorum öyle, sen?","datetime":"2022-08-20T19:01:30.000Z"},
+           {"text":"Hayır görmemiştim","datetime":"2022-08-20T19:03:30.000Z"},
+           {"text":"Kesinlikleeee","datetime":"2022-08-20T19:03:40.000Z"},
+        ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
