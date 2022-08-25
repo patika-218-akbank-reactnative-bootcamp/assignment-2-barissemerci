@@ -16,7 +16,7 @@
 
 
 
- const ChatPageHeader = ({userName,userId}) => {
+ const ChatPageHeader = ({userName,profilePhoto}) => {
   const navigation = useNavigation(); 
 
   function navigateHomePage(){
@@ -30,7 +30,7 @@ return(
       <IconBack  style={styles.icon} size={30} name="arrow-back"  />
       </TouchableOpacity>
         <View style={styles.imageAndName}>
-        <Image style={styles.profileImage} source={{uri: 'https://picsum.photos/id/6/100/100'}} />
+        <Image style={styles.profileImage} source={{uri:profilePhoto }} />
             <Text style={styles.nameText}>{userName}</Text>
         </View>
         <View style={styles.icons}>
