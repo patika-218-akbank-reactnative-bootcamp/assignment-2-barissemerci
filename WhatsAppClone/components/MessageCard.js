@@ -7,30 +7,32 @@
  */
 
  import React from 'react';
- import {StyleSheet, View,Text,Image} from 'react-native';
+ import {StyleSheet, View,Text,Image, TouchableOpacity} from 'react-native';
 
 
 
- const MessageCard = (props) => {
+ const MessageCard = ({info,onPress}) => {
 
 
 
     return(
+      <TouchableOpacity onPress={() => {onPress(info.userId)}}>
         <View style={styles.container}>
-            <Image style={styles.profileImage} source={{uri: 'https://picsum.photos/100/100'}} />
+          <Image style={styles.profileImage} source={{uri: info.profilePhoto}} />
             <View style={styles.nameAndMessage}>
-            <Text style={styles.name}>{props.message.receiver.firstName} {props.message.receiver.lastName }</Text>
-            <Text style={styles.message}>{props.message.messages[props.message.messages.length-1].text}</Text>
+            <Text style={styles.name}>{info.firstName} {info.lastName}</Text>
+            <Text style={styles.message}>{info.message.text}</Text>
             </View>
             <View style={styles.date}>
                 <Text style={styles.dateText}>23.08</Text>               
                  <Text></Text>
-
             </View>
+        
+            
 
 
         </View>
-
+        </TouchableOpacity>
 
 
     );
