@@ -6,43 +6,31 @@
  * @flow strict-localSS
  */
 
- import React from 'react';
- import {StyleSheet, View,Text, ScrollView} from 'react-native';
- import ChatPageHeader from './ChatPageHeader';
- import ChatView from './ChatView'
- import InputView from './InputView'
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
+import ChatPageHeader from './ChatPageHeader';
+import ChatView from './ChatView';
+import InputView from './InputView';
 
- const ChatPage = (props) => {
+const ChatPage = props => {
+  return (
+    <View style={styles.container}>
+      <ChatPageHeader
+        userId={props.route.params.userId}
+        userName={props.route.params.userName}
+        profilePhoto={props.route.params.profilePhoto}
+      />
+      <ChatView conversation={props.route.params.conversation} />
+      <InputView />
+    </View>
+  );
+};
 
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    backgroundColor: 'gray',
+  },
+});
 
-    return(
-
-        <View style={styles.container}>
-        <ChatPageHeader userId={props.route.params.userId} userName={props.route.params.userName} profilePhoto={props.route.params.profilePhoto}></ChatPageHeader>
-        <ChatView conversation={props.route.params.conversation}></ChatView>
-        <InputView></InputView>
-
-
-
-
-   </View>
-
-    );
-  
-
-
- };
-
-   
-
- 
- const styles = StyleSheet.create({
-  container:{
-   height:'100%',
-   backgroundColor:'gray'
- 
-  }
- });
- 
- export default ChatPage;
- 
+export default ChatPage;
