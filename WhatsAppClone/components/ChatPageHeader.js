@@ -7,22 +7,31 @@
  */
 
  import React from 'react';
- import {StyleSheet, View,Text,Image} from 'react-native';
+ import {StyleSheet, View,Text,Image, TouchableOpacity} from 'react-native';
  import IconBack from 'react-native-vector-icons/MaterialIcons';
  import IconCamera from 'react-native-vector-icons/Ionicons';
  import IconPhone from 'react-native-vector-icons/FontAwesome';
  import IconThreeDots from 'react-native-vector-icons/Entypo'
+ import { useNavigation } from '@react-navigation/native';
 
 
 
- const ChatPageHeader = () => {
+ const ChatPageHeader = ({userName,userId}) => {
+  const navigation = useNavigation(); 
+
+  function navigateHomePage(){
+      navigation.navigate('HomePage')
+    }
+
 
 return(
     <View style={styles.container}>
-        <IconBack  style={styles.icon} size={30} name="arrow-back"  />
+      <TouchableOpacity onPress={navigateHomePage}>
+      <IconBack  style={styles.icon} size={30} name="arrow-back"  />
+      </TouchableOpacity>
         <View style={styles.imageAndName}>
         <Image style={styles.profileImage} source={{uri: 'https://picsum.photos/id/6/100/100'}} />
-            <Text style={styles.nameText}>BArış SEMERCİs</Text>
+            <Text style={styles.nameText}>{userName}</Text>
         </View>
         <View style={styles.icons}>
             <IconCamera  style={styles.iconRight} size={27} name="videocam"/>
