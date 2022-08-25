@@ -8,15 +8,16 @@
 
  import React from 'react';
  import {StyleSheet, View,Text,Image, TouchableOpacity} from 'react-native';
+ import Moment from 'moment';
 
 
 
  const MessageCard = ({info,onPress}) => {
 
-
+  Moment.locale('tr');
 
     return(
-      <TouchableOpacity onPress={() => {onPress(info.userId,info.firstName+" "+info.lastName)}}>
+      <TouchableOpacity onPress={() => {onPress(info.userId,info.firstName+" "+info.lastName,info.profilePhoto)}}>
         <View style={styles.container}>
           <Image style={styles.profileImage} source={{uri: info.profilePhoto}} />
             <View style={styles.nameAndMessage}>
@@ -24,7 +25,7 @@
             <Text style={styles.message}>{info.message.text}</Text>
             </View>
             <View style={styles.date}>
-                <Text style={styles.dateText}>23.08</Text>               
+                <Text style={styles.dateText}>{Moment(info.message.datetime).format("HH:mm")}</Text>               
                  <Text></Text>
             </View>
         
