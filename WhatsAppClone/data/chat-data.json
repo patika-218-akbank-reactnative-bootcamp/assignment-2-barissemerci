@@ -58,9 +58,13 @@
            {"text":"Ben de aynı","datetime":"2022-08-20T19:02:00.000Z"},
            {"image":"https://picsum.photos/200/300","datetime":"2022-08-20T19:02:00.000Z"},
            {"text":"Şu fotoğrafı gördün mü?","datetime":"2022-08-20T19:03:00.000Z"},
-           {"text":"Yeni paylaşmış","datetime":"2022-08-20T19:03:00.000Z"},
-           {"text":"Harika değil mi???","datetime":"2022-08-20T19:03:00.000Z"},
-           {"text":"Bence deeeee","datetime":"2022-08-20T19:05:00.000Z"}
+           {"text":"Yeni paylaşmış","datetime":"2022-08-20T19:03:30.000Z"},
+           {"text":"Harika değil mi???","datetime":"2022-08-20T19:04:00.000Z"},
+           {"text":"Bence deeeee","datetime":"2022-08-20T19:05:50.000Z"},
+           {"text":"Evet gördüm","datetime":"2022-08-20T19:06:50.000Z"},
+           {"text":"Bu da harika","datetime":"2022-08-20T19:07:00.000Z"}
+
+
         ]
     },
     {
@@ -76,8 +80,13 @@
         "messages":[
            {"text":"Hey","datetime":"2022-08-20T19:00:30.000Z"},
            {"text":"Oturuyorum öyle, sen?","datetime":"2022-08-20T19:01:30.000Z"},
-           {"text":"Hayır görmemiştim","datetime":"2022-08-20T19:03:30.000Z"},
-           {"text":"Kesinlikleeee","datetime":"2022-08-20T19:03:40.000Z"}
+           {"text":"Hayır görmemiştim","datetime":"2022-08-20T19:04:30.000Z"},
+           {"text":"Kesinlikleeee","datetime":"2022-08-20T19:05:40.000Z"},
+           {"image":"https://picsum.photos/id/5/200/300","datetime":"2022-08-20T19:06:00.000Z"},
+           {"text":"Sen şunu gördün mü???","datetime":"2022-08-20T19:06:10.000Z"},
+           {"text":"Di mi","datetime":"2022-08-20T19:07:10.000Z"}
+
+
         ]
     }
 
