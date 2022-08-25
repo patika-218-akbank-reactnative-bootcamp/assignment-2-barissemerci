@@ -16,7 +16,7 @@
 
 
     return(
-      <TouchableOpacity onPress={() => {onPress(info.userId)}}>
+      <TouchableOpacity onPress={() => {onPress(info.userId,info.firstName+" "+info.lastName)}}>
         <View style={styles.container}>
           <Image style={styles.profileImage} source={{uri: info.profilePhoto}} />
             <View style={styles.nameAndMessage}>
