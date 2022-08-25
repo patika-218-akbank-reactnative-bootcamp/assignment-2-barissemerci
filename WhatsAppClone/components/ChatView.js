@@ -57,7 +57,7 @@ console.log(conversationCombined)
       return(<View style={item.isMyMessage==1 ? styles.myImageBox :styles.imageBox}>
         <Image style={styles.image} source={{uri: item.messages.image}}/>
         <View>
-        <Text style={item.isMyMessage==1 ? styles.timeTextImage:styles.timeTextImage}>{Moment(item.messages.datetime).format("HH:mm")}</Text>
+        <Text style={item.isMyMessage==1 ? styles.myTimeTextImage:styles.timeTextImage}>{Moment(item.messages.datetime).format("HH:mm")}</Text>
         {
           item.isMyMessage==1 &&
           <IconCheck style={styles.iconImage} size={20} name="checkmark-done"/>
@@ -184,8 +184,10 @@ timeTextImage:{
 
 
   iconImage:{
-    position:'absolute',marginTop:-24,
-    right:5,  color:'white'
+    position:'absolute',
+    marginTop:-24,
+    right:5,
+    color:'white'
   },
   
 
