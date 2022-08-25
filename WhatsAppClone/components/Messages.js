@@ -6,25 +6,26 @@
  * @flow strict-localSS
  */
 
- import React from 'react';
  import {StyleSheet,Button, View,Text, ScrollView, FlatList} from 'react-native';
  import { useNavigation } from '@react-navigation/native';
- import chat_data from 'WhatsAppClone/data/chat-data.json'
  import MessageCard from './MessageCard';
+ import React, { useEffect } from 'react';
 
 
 
 
- const Messages = (props) => {
+
+ const Messages = ({info}) => {
 
    const navigation = useNavigation(); 
 
 
-   const renderMessageCard=({item}) =><MessageCard message={item} />
+   const renderMessageCard=({item}) =><MessageCard onPress={navigateChatPage} info={item} />
 
 
 
-   function navigateChatPage(){
+   function navigateChatPage(id){
+    console.log("onpress tetiklendi", id)
       navigation.navigate('ChatPage')
     }
 
@@ -32,9 +33,9 @@
 
    return(
       <FlatList
-      data={props.messages}
+      data={info}
       renderItem={renderMessageCard}
-      keyExtractor={item => item.id}
+      keyExtractor={item => item.key}
     />
       
          );
