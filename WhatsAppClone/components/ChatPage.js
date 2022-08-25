@@ -18,7 +18,7 @@
     return(
 
         <View style={styles.container}>
-        <ChatPageHeader userId={props.route.params.userId} userName={props.route.params.userName}></ChatPageHeader>
+        <ChatPageHeader userId={props.route.params.userId} userName={props.route.params.userName} profilePhoto={props.route.params.profilePhoto}></ChatPageHeader>
         <ChatView conversation={props.route.params.conversation}></ChatView>
         <InputView></InputView>
 
