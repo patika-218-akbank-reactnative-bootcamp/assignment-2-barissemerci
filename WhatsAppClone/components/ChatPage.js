@@ -8,18 +8,38 @@
 
  import React from 'react';
  import {StyleSheet, View,Text, ScrollView} from 'react-native';
- import IconSearch from 'react-native-vector-icons/Fontisto'
- import IconThreeDots from 'react-native-vector-icons/Entypo'
+ import ChatPageHeader from './ChatPageHeader';
+ import ChatView from './ChatView'
+ import InputView from './InputView'
 
- const ChatPage = () => (
-    <ScrollView style={styles.container}>
-<Text>CHAT PAGE</Text>
+ const ChatPage = (props) => {
 
-    </ScrollView>
- );
+
+    return(
+
+        <View style={styles.container}>
+        <ChatPageHeader userId={props.route.params.userId} userName={props.route.params.userName}></ChatPageHeader>
+        <ChatView conversation={props.route.params.conversation}></ChatView>
+        <InputView></InputView>
+
+
+
+
+   </View>
+
+    );
+  
+
+
+ };
+
+   
+
  
  const styles = StyleSheet.create({
   container:{
+   height:'100%',
+   backgroundColor:'gray'
  
   }
  });
