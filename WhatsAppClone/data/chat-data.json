@@ -1,10 +1,12 @@
 [
     {
-        "id":"123swd",
+        "id":"1",
+        "senderId":"123swd",
         "receiver":{
             "id":"5456smk",
             "firstName":"Ahmet",
-            "lastName":"Yılmaz"
+            "lastName":"Yılmaz",
+            "profilePhoto":"https://picsum.photos/id/5/100/100"
         },
         "messages":[
            {"text":"Selam","datetime":"2022-08-20T19:00:00.000Z"},
@@ -20,11 +22,14 @@
 
 
     {
-        "id":"5456smk",
+        "id":"2",
+        "senderId":"5456smk",
         "receiver":{
             "id":"123swd",
             "firstName":"Barış",
-            "lastName":"Yakamoz"
+            "lastName":"Yakamoz",
+            "profilePhoto":"https://picsum.photos/id/6/100/100"
+
         },
         "messages":[
            {"text":"Merhaba","datetime":"2022-08-20T19:00:30.000Z"},
@@ -37,11 +42,15 @@
 
 
     {
-        "id":"klm693",
+        
+        "id":"3",
+        "senderId":"klm693",
         "receiver":{
             "id":"5456smk",
             "firstName":"Ahmet",
-            "lastName":"Yılmaz"
+            "lastName":"Yılmaz",
+            "profilePhoto":"https://picsum.photos//id5/100/100"
+
         },
         "messages":[
            {"text":"Hey","datetime":"2022-08-20T19:00:00.000Z"},
@@ -55,11 +64,14 @@
         ]
     },
     {
-        "id":"5456smk",
+        "id":"4",
+        "senderId":"5456smk",
         "receiver":{
             "id":"klm693",
             "firstName":"Mert",
-            "lastName":"Karayel"
+            "lastName":"Karayel",
+            "profilePhoto":"https://picsum.photos/id/7/100/100"
+
         },
         "messages":[
            {"text":"Hey","datetime":"2022-08-20T19:00:30.000Z"},
