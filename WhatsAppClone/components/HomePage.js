@@ -58,9 +58,9 @@ var conversation;
   
  
   
-    function navigateChatPage(id,name){
+    function navigateChatPage(id,name,profilePhoto){
       findChatHistory(id)
-      navigation.navigate('ChatPage',{userId:id,userName:name,conversation:conversation})
+      navigation.navigate('ChatPage',{userId:id,userName:name,conversation:conversation,profilePhoto:profilePhoto})
     }
 
 
