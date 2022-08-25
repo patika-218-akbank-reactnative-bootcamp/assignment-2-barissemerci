@@ -7,7 +7,6 @@
  */
 
  import {StyleSheet,Button, View,Text, ScrollView, FlatList} from 'react-native';
- import { useNavigation } from '@react-navigation/native';
  import MessageCard from './MessageCard';
  import React, { useEffect } from 'react';
 
@@ -15,19 +14,14 @@
 
 
 
- const Messages = ({info}) => {
-
-   const navigation = useNavigation(); 
-
-
-   const renderMessageCard=({item}) =><MessageCard onPress={navigateChatPage} info={item} />
+ const Messages = ({info,onPress}) => {
 
 
 
-   function navigateChatPage(id){
-    console.log("onpress tetiklendi", id)
-      navigation.navigate('ChatPage')
-    }
+   const renderMessageCard=({item}) =><MessageCard onPress={onPress} info={item} />
+
+
+
 
 
 
