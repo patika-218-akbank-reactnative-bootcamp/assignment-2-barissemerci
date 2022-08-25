@@ -17,7 +17,7 @@ const Menu = () =>{
     tabs.map((item,index)=> {
 
         if (item==='KAMERA') {
-            return  <TouchableOpacity onPress={() => {
+            return  <TouchableOpacity key={item} onPress={() => {
                 setselectedTab(item);
               }}>
             <View style={styles.cameraMenuStyle}>
@@ -29,7 +29,7 @@ const Menu = () =>{
           }
           else{
             return (
-                    <TouchableOpacity  onPress={() => {
+                    <TouchableOpacity key={item} onPress={() => {
                 setselectedTab(item);
               }} style={styles.touchableOpacity}>
             <View style={styles.menuItemsStyle}>
