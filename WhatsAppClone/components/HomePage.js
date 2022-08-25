@@ -10,17 +10,21 @@
 import {ScrollView, StyleSheet, View,Button} from 'react-native';
 import Header from './Header';
 import Menu from './Menu';
+import { useNavigation } from '@react-navigation/native';
+
 import IconMessage from 'react-native-vector-icons/MaterialCommunityIcons'
 import Messages from './Messages';
 import chat_data from 'WhatsAppClone/data/chat-data.json'
 import constants from 'WhatsAppClone/data/constants.json'
 import React, { useEffect } from 'react';
-var temp;
+var lastChatted;
+var conversation;
 
 
  
  const HomePage = (props) => {
  
+  const navigation = useNavigation(); 
 
    
     var CONSTANTS = constants.map(function(item) {
@@ -29,7 +33,7 @@ var temp;
       };
     });
 
-    temp = chat_data.filter(item=> item.senderId.includes(CONSTANTS[0].myId)).map(function(item,index) {
+    lastChatted = chat_data.filter(item=> item.senderId.includes(CONSTANTS[0].myId)).map(function(item,index) {
       return {
         key:index,
         userId:item.receiver.id,
@@ -39,16 +43,26 @@ var temp;
         profilePhoto:item.receiver.profilePhoto
       };
     });
-    console.log(temp)
+
+    function findChatHistory(id){
+    conversation=chat_data.filter(item => item.senderId.includes(id) || item.receiver.id.includes(id)).map(function(item,index){
+      return{
+          messages:item.messages
+      };
+     });
+    
+
+    }
 
 
   
  
   
-  function navigateChatPage(){
-    props.navigation.navigate('ChatPage')
-    
-  }
+    function navigateChatPage(id,name){
+      findChatHistory(id)
+      navigation.navigate('ChatPage',{userId:id,userName:name,conversation:conversation})
+    }
+
 
   
 
@@ -60,7 +74,7 @@ var temp;
         <View style={styles.button}>
           <IconMessage style={styles.icon} size={35} name="android-messages"/>
         </View>
-        <Messages info={temp} />
+        <Messages info={lastChatted} onPress={navigateChatPage} />
           
     </View>
    );
