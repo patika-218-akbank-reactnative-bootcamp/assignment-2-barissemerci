@@ -9,6 +9,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import Moment from 'moment';
+import 'moment/locale/tr';
 
 const MessageCard = ({info, onPress}) => {
   Moment.locale('tr');

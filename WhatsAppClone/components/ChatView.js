@@ -10,6 +10,7 @@ import React from 'react';
 import {StyleSheet, View, Text, Image, FlatList} from 'react-native';
 import IconCheck from 'react-native-vector-icons/Ionicons';
 import Moment from 'moment';
+import 'moment/locale/tr';
 
 var conversationCombined = {};
 
